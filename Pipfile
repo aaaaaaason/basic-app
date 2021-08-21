@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+basic-app = {editable = true, path = "."}
+python-dotenv = "*"
+fastapi = "*"
+sqlalchemy = "*"
+pydantic = {extras = ["email"], version = "*"}
+uvicorn = "*"
+asyncpg = "*"
+email-validator = "*"
+argon2-cffi = "*"
+alembic = "*"
+psycopg2 = "*"
+aiofiles = "*"
+google-auth = "*"
+requests = "*"
+python-multipart = "*"
+jinja2 = "*"
+
+[dev-packages]
+build = "*"
+pytest = "*"
+setuptools = "*"
+pip-tools = "*"
+pylint = "*"
+yapf = "*"
+pytest-asyncio = "*"
+httpx = "*"
+mypy = "*"
+
+[requires]
+python_version = "3.8"

@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:6.0-alpine
+    restart: always
+    command: redis-server --requirepass password
+    ports:
+      - 6379:6379
+
+  postgres:
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    image: postgres:13.3-alpine
+    restart: always
+    ports:
+      - 5432:5432
